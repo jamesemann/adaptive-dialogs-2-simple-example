@@ -1,0 +1,18 @@
+{
+    "name": "adaptive-dialogs-2-simple-example",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "https://localhost:5001/api/messages",
+            "id": "75a28d20-5314-11ea-9fb8-b10b427d5683",
+            "name": "https://localhost:5001/api/messages"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "overrides": null,
+    "path": ".\\adaptive-dialogs-2-simple-example.bot"
+}
