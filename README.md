@@ -5,11 +5,15 @@ This sample demonstrates the basic principles of loading an adaptive dialog from
 It delivers the following conversations demonstrating basic input capture and conditional using an if action:
 
 ***Bot: What's the secret?***
+
 ***User: 1234***
+
 ***Bot: you got it***
 
 ***Bot: What's the secret?***
+
 ***User: 5678***
+
 ***Bot: Sorry, that's not right***
 
 Using the following `.dialog` conversation definition:
