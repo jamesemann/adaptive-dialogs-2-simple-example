@@ -3,11 +3,32 @@
   "$kind": "Microsoft.AdaptiveDialog",
   "triggers": [
     {
-      "$kind": "Microsoft.OnUnknownIntent",
+      "$kind": "Microsoft.OnBeginDialog",
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
-          "activity":  "You said '@{turn.activity.text}'"
+          "$kind": "Microsoft.TextInput",
+          "prompt": "Whats the secret?",
+          "property": "user.secret"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "condition": "user.secret == '1234'",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "activity": "You got it"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "condition": "user.secret != '1234'",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "activity": "Sorry, that's not right"
+            }
+          ]
         }
       ]
     }
